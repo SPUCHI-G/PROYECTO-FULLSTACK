@@ -1,0 +1,87 @@
+img.card-img-top{
+    width: 200px;
+}
+.card{
+    align-items: center;
+    background: linear-gradient(to right, rgb(97, 67, 133), rgb(81, 99, 149));
+}
+.bg-1{
+     background: linear-gradient(to right, rgb(97, 67, 133), rgb(81, 99, 149));
+     height: 20vh;
+    }
+    
+    .t-stroke {
+    text-align: center;
+    color: transparent;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;
+    -moz-text-stroke-color: #000000;
+    -webkit-text-stroke-color: #ffffff;
+    text-overflow: clip;
+    }
+    .t-shadow {
+    text-shadow: 7px 7px #8dffcd;
+    }
+    
+body{
+    background-color: #1b1b1b;
+    color: black;
+    overflow-x: hidden;
+}
+main{
+    margin-top: 5%;
+}
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background:#333;
+    color: #fff;
+    outline: 1px solid #2a2a2a;
+}
+.sidebar h2{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: #2a2a2a;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li{
+    outline: 1px solid #2a2a2a;
+    transition: all 0.3s;
+}
+.sidebar li:hover{
+    background: #444;
+    border-left: 5px solid #393;
+}
+.sidebar a{
+    display: block;
+    color: #fff;
+    text-decoration:  none;
+    padding: 10px;
+}
+
+.contenido{
+    
+    background-image: url("/imagenes/fondo-categoria.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    padding: 50px;
+    transition:all 0.3s;
+    box-sizing: border-box;
+    
+    padding: 70px;
+}
+
+.menu-bar{
+    cursor: pointer;
+}
+.abrir{
+    transform: translateX(250px);
+}

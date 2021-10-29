@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400);
+
+header{
+    background-image: url("/imagenes/portada.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    height: 35%;
+    top: 25px;
+    right:0;
+    left: 0;
+}
+body{
+    background-color: #1b1b1b;
+    color: white;
+    overflow-x: hidden;
+}
+main{
+    margin-top: 15%;
+}
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background:#333;
+    color: #fff;
+    outline: 1px solid #2a2a2a;
+}
+.sidebar h2{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: #2a2a2a;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li{
+    outline: 1px solid #2a2a2a;
+    transition: all 0.3s;
+}
+.sidebar li:hover{
+    background: #444;
+    border-left: 5px solid #393;
+}
+.sidebar a{
+    display: block;
+    color: #fff;
+    text-decoration:  none;
+    padding: 10px;
+}
+
+.contenido{
+    position: absolute;
+    padding: 50px;
+    transition:all 0.3s;
+    box-sizing: border-box;
+    background: #1b1b1b;
+    background-attachment: fixed;
+    padding: 70px;
+}
+
+.menu-bar{
+    cursor: pointer;
+}
+.abrir{
+    transform: translateX(250px);
+}
