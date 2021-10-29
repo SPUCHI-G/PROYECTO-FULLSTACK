@@ -1,0 +1,72 @@
+<%- include("header")  -%> 
+
+<div class="container">
+    <div class="row">
+
+ <!-- FORMULARIO PARA INGRESAR ACTIVIDADES -->
+
+        <div class="col-md-4">
+            <div class="card" , style="background-color: rgb(181, 190, 216) ;">
+                <h1>Ingreso a favoritos</h1>
+                <div class="card-body">
+                    <form action="/Favoritos" method="POST">
+                        <div class="form-group">
+                            <input type="number" id="id" name="id"  placeholder="Ingrese id" class="form-control mb-4">
+                            <input type="text" id="imagen" name="imagen"  placeholder="Ingrese imagen:url" class="form-control mb-4">
+                            <input type="text" id="Titulo" name="Titulo"  placeholder="Ingrese el titulo juego" class="form-control mb-4">
+                            <input type="text" id="categoria" name="categoria"  placeholder="Ingrese categoria" class="form-control mb-4">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control mb-4" id="descripcion" name="descripcion" placeholder="Ingrese la descripcion del juego"  ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" style="padding: 5px"> AGREGAR</button>
+                        <a href="http://127.0.0.1:5500/vistas/login.html" class="button">SALIR</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- TABLA DE ACTIVIDADES -->
+
+        <div class="col-md-8">
+            <table class="table table-bordered table-hover", style="background-color: rgb(181, 190, 216) ;">
+            
+            <thead>
+                <tr>
+                    <th>Numero Identificacion</th>
+                    <th>imagen</th>
+                    <th>Titulo</th>
+                    <th>tipo categoria</th>
+                    <th>Descripcion</th>
+                    <th>metodos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (var i=0;i<tareas.length;i++ ){  %> 
+                    <tr>
+                        <td><%=tareas[i].id %> </td>
+                        <td><%=tareas[i].imagen %> </td>
+                        <td><%=tareas[i].Titulo %> </td>
+                        <td><%=tareas[i].categoria %> </td>
+                        <td><%=tareas[i].descripcion  %> </td>
+                        <td >
+                         <a href="/eliminar/<%=tareas[i]._id %>" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                
+            <% } %> 
+               
+            </tbody>
+        </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<%- include("footer")  -%> 
